@@ -21,8 +21,11 @@ function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" mt={1}>
       {'Copyright © '}
-      <Link href="https://mui.com/">Sitemark&nbsp;</Link>
+      <Link href="#">LATENT SPACE&nbsp;</Link>
       {new Date().getFullYear()}
+      {' Made with MUI and Spline by @ParaLLel. All rights reserved.'}
+      <br></br>
+      {'See my GitHub profile, personal webside and project page for more information.'}
     </Typography>
   );
 }
@@ -191,7 +194,7 @@ export default function Footer() {
         >
           <IconButton
             color="inherit"
-            href="https://github.com/mui"
+            href="https://github.com/parallel1416"
             aria-label="GitHub"
             sx={{ alignSelf: 'center' }}
           >
@@ -199,7 +202,7 @@ export default function Footer() {
           </IconButton>
           <IconButton
             color="inherit"
-            href="https://twitter.com/MaterialUI"
+            href="https://parallel1416.github.io/"
             aria-label="X"
             sx={{ alignSelf: 'center' }}
           >
@@ -207,7 +210,7 @@ export default function Footer() {
           </IconButton>
           <IconButton
             color="inherit"
-            href="https://www.linkedin.com/company/mui/"
+            href="https://github.com/parallel1416/third_door"
             aria-label="LinkedIn"
             sx={{ alignSelf: 'center' }}
           >

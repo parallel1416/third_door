@@ -12,31 +12,34 @@ import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
 import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
 import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
+import stage from './images/stage.jpg'
+import ai from './images/ai.png'
+import platform from './images/platform.png'
 
 const items = [
   {
     icon: <ViewQuiltRoundedIcon />,
-    title: 'Dashboard',
+    title: 'Virtual theatre',
     description:
-      'This item could provide a snapshot of the most important metrics or data points related to the product.',
-    imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
+      'Recreate the entire stage in cyberspace. Visitors from the internet can sit in the audience and watch the actors in real time.',
+    imageLight: {stage},
+    imageDark: {stage},
   },
   {
     icon: <EdgesensorHighRoundedIcon />,
-    title: 'Mobile integration',
+    title: 'AI integration',
     description:
-      'This item could provide information about the mobile app version of the product.',
-    imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
+      'AI assistants accessible throughout creation pipeline. Let AI reimagine your story, optimize your workflow, and suggest new ideas.',
+    imageLight: {ai},
+    imageDark: {ai},
   },
   {
     icon: <DevicesRoundedIcon />,
     title: 'Available on all platforms',
     description:
-      'This item could let users know the product is available on all platforms, such as web, mobile, and desktop.',
-    imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
+      'Our product is compatible with all platforms, including web, mobile, and desktop.',
+    imageLight: {platform},
+    imageDark: {platform},
   },
 ];
 
@@ -55,16 +58,14 @@ export default function Features() {
         <Grid item xs={12} md={6}>
           <div>
             <Typography component="h2" variant="h4" color="text.primary">
-              Product features
+              More features
             </Typography>
             <Typography
               variant="body1"
               color="text.secondary"
               sx={{ mb: { xs: 2, sm: 4 } }}
             >
-              Here you can provide a brief overview of the key features of the
-              product. For example, you could list the number of features, the types
-              of features, add-ons, or the benefits of the features.
+              Every detail matters.
             </Typography>
           </div>
           <Grid container item gap={1} sx={{ display: { xs: 'auto', sm: 'none' } }}>
@@ -258,12 +259,16 @@ export default function Features() {
                 width: 420,
                 height: 500,
                 backgroundSize: 'contain',
-                backgroundImage: (theme) =>
-                  theme.palette.mode === 'light'
-                    ? items[selectedItemIndex].imageLight
-                    : items[selectedItemIndex].imageDark,
-              }}
-            />
+                alignContent: 'center',
+                justifyContent: 'center',
+                display: 'flex',
+                alignItems: 'center',
+                overflow: 'hidden',
+              }}>
+              {selectedItemIndex === 0 && <img src={stage} width={'500px'}></img>}
+              {selectedItemIndex === 1 && <img src={ai} width={'500px'}></img>}
+              {selectedItemIndex === 2 && <img src={platform} width={'500px'}></img>}
+              </Box>
           </Card>
         </Grid>
       </Grid>

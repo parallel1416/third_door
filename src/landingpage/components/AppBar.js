@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { PaletteMode } from '@mui/material';
+import PropTypes from 'prop-types';
+
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -18,19 +19,14 @@ const logoStyle = {
   cursor: 'pointer',
 };
 
-interface AppAppBarProps {
-  mode: PaletteMode;
-  toggleColorMode: () => void;
-}
-
-function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
+function ApppBar({ mode, toggleColorMode }) {
   const [open, setOpen] = React.useState(false);
 
-  const toggleDrawer = (newOpen: boolean) => () => {
+  const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (sectionId) => {
     const sectionElement = document.getElementById(sectionId);
     const offset = 128;
     if (sectionElement) {
@@ -66,8 +62,8 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
               borderRadius: '999px',
               bgcolor:
                 theme.palette.mode === 'light'
-                  ? 'rgba(255, 255, 255, 0.4)'
-                  : 'rgba(0, 0, 0, 0.4)',
+                  ? 'rgba(255, 255, 255, 0.2)'
+                  : 'rgba(0, 0, 0, 0.2)',
               backdropFilter: 'blur(24px)',
               maxHeight: 40,
               border: '1px solid',
@@ -100,7 +96,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    Features
+                    Home
                   </Typography>
                 </MenuItem>
                 <MenuItem
@@ -108,33 +104,10 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    Testimonials
+                    About
                   </Typography>
                 </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection('highlights')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography variant="body2" color="text.primary">
-                    Highlights
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection('pricing')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography variant="body2" color="text.primary">
-                    Pricing
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection('faq')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography variant="body2" color="text.primary">
-                    FAQ
-                  </Typography>
-                </MenuItem>
+                
               </Box>
             </Box>
             <Box
@@ -196,18 +169,11 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                     <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
                   </Box>
                   <MenuItem onClick={() => scrollToSection('features')}>
-                    Features
+                    Home
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('testimonials')}>
-                    Testimonials
+                    About
                   </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('highlights')}>
-                    Highlights
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('pricing')}>
-                    Pricing
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('faq')}>FAQ</MenuItem>
                   <Divider />
                   <MenuItem>
                     <Button
@@ -243,4 +209,9 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
   );
 }
 
-export default AppAppBar;
+ApppBar.propTypes = {
+  mode: PropTypes.oneOf(['dark', 'light']).isRequired,
+  toggleColorMode: PropTypes.func.isRequired,
+};
+
+export default ApppBar;

@@ -77,7 +77,7 @@ export default function FAQ() {
             id="panel2d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              Can I return the product if it doesn&apos;t meet my expectations?
+              Can I get a refund if the service doesn&apos;t meet my expectations?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -86,9 +86,9 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Absolutely! We offer a hassle-free return policy. If you&apos;re not
-              completely satisfied, you can return the product within [number of
-              days] days for a full refund or exchange.
+              Due to the uniqueness of stage performances, it is not possible to ask for a refund once the production is under way.
+              However, we do offer a trial of [number of days] days. If you&apos;re not
+              satisfied during the trial, you can ask for a full refund.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -111,9 +111,8 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Our product distinguishes itself through its adaptability, durability,
-              and innovative features. We prioritize user satisfaction and
-              continually strive to exceed expectations in every aspect.
+              There is no product currently in the performance arts industry that offers the same level of deep integration with cutting-edge 
+              technology as ours. We offer a brand-new methodology as well as unparalled creative power. 
             </Typography>
           </AccordionDetails>
         </Accordion>

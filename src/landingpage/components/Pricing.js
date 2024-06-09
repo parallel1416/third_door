@@ -18,8 +18,8 @@ const tiers = [
     price: '0',
     description: [
       '10 users included',
-      '2 GB of storage',
-      'Help center access',
+      'Basic AR software',
+      'Limited VR hardware access',
       'Email support',
     ],
     buttonText: 'Sign up for free',
@@ -31,10 +31,10 @@ const tiers = [
     price: '15',
     description: [
       '20 users included',
-      '10 GB of storage',
-      'Help center access',
+      'AR software Pro',
+      'Unlimited VR hardware access',
       'Priority email support',
-      'Dedicated team',
+      'Stage design team',
       'Best deals',
     ],
     buttonText: 'Start now',
@@ -45,8 +45,9 @@ const tiers = [
     price: '30',
     description: [
       '50 users included',
-      '30 GB of storage',
-      'Help center access',
+      'Art director collaboration',
+      'Tailored special effects',
+      'Unique hardware production',
       'Phone & email support',
     ],
     buttonText: 'Contact us',
@@ -78,10 +79,7 @@ export default function Pricing() {
           Pricing
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          Quickly build an effective pricing table for your potential customers with
-          this layout. <br />
-          It&apos;s built with default Material UI components with little
-          customization.
+          Choose the best plan for your creative projects.
         </Typography>
       </Box>
       <Grid container spacing={3} alignItems="center" justifyContent="center">
